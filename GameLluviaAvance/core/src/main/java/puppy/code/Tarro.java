@@ -21,9 +21,10 @@ public class Tarro {
 	   private int tiempoHerido;
 
 
-	   public Tarro(Texture tex, Sound ss) {
-		   bucketImage = tex;
-		   sonidoHerido = ss;
+	   public Tarro() {
+		   bucketImage = new Texture(Gdx.files.internal("bucket.png"));
+		   sonidoHerido = Gdx.audio.newSound(Gdx.files.internal("hurt.ogg"));
+		   crear();
 	   }
 
 		public int getVidas() {
